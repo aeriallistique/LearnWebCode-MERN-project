@@ -8,6 +8,7 @@ function AnimalCard(props) {
   const [draftSpecies, setDraftSpecies] = useState("")
 
   let margin= true;
+  
   async function submitHandler(e) {
     e.preventDefault()
     setIsEditing(false)
@@ -41,7 +42,7 @@ function AnimalCard(props) {
 
   return (
     
-    <div className={!margin && 'card mb-4' || 'card'}>
+    <div className={margin? 'card mb-4' : 'card'}>
       <div className="our-card-top">
         {isEditing && (
           <div className="our-custom-input">
